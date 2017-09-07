@@ -1,26 +1,24 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<math.h>
 #define MAX_SIZE 10
 
-int queue[MAX_SIZE],rear=-1,front=-1;
+int queue[MAX_SIZE],top=-1;
 
 int isFull(){
-	
-	
-		if(rear==MAX_SIZE-1)
-        return 1;
+	if(abs(rear-front)%(MAXSIZE-1)
+	return rear==MAXSIZE-1||(abs(front-rear)%MAXSIZE-1==0))
 	}
-	
 
-void isEmpty(){
-if (rear==-1&&front==-1)
+int isEmpty(){
+if (rear==-1)&&(front==-1)
 return 1;
 else
-return -1;
+return 0;
 	
 }
 
-void display(){
+int display(){
 	return front[queue];
 }
 
@@ -30,7 +28,7 @@ if(isFull())
 {
 if(isEmpty())
 front++;
-rear++;
+rear=(rear++)%MAXSIZE
 queue[rear]=d;
 printf("%d element is deleted",d);
 }
@@ -40,18 +38,17 @@ printf("Queue is full");
 
 void delete()
 {
-if(!(isEmpty))
+if(!isEmpty())
 {
 int d=queue[front];
 printf("%d element is deleted",d);
 if(front==rear)
 front=rear=-1;
 else
-front++;
+front=(front++)%MAXSIZE;
 }
 
- int main()
-{
+int main(){
 	int choice,e;
 	do
 	{
@@ -59,15 +56,15 @@ front++;
 		printf("\nEnter\n1.display\n2.insert\n3.delete\n4.Exit\n");
 		printf("Enter your choice: ");
 		scanf("%d",&choice);	//take input in choice variable
-		switch(e){
+		switch(choice){
 			case 1:
-				display();//call peek function
-			
+				e=display();//call peek function
+				printf("\nElement at the top of stack is : %d",e);
 				break;
 			case 2:
 				printf("\nEnter the elment to be inserted: ");
 				scanf("%d",&e);
-				insertQueue(e);//call insertQueue function
+				insertQueue(d);//call insertQueue function
 				break;
 			case 3:
 				delete();//call pop function
@@ -81,5 +78,4 @@ front++;
 		}
 	}while(1);
 	return 0;
-}
 }
