@@ -1,120 +1,36 @@
-//PROGRAM TO IMPLEMENT BINARY SEARCH TREE
 #include<stdio.h>
 #include<stdlib.h>
-
-typedef struct bst{
-	int data;
-	struct bst *left,*right;
-}node;
-
-void insert(node **r,int num){
-	node *temp,*ptr;
-	temp=*r;
-	
-	if(temp==NULL)
-		*r=ptr;
-	else{
-		if(num > temp->data)
-		{
-			if(temp->right==NULL{
-					ptr=(node*)malloc(sizeof(node));
-					ptr->data=num;
-	                ptr->left=NULL;
-	                ptr->right=NULL;	
-	                temp->right=ptr;
-	                return;
-				}
-				else
-				{
-					temp=temp->right;
-					insert(&temp,num);
-				}
-			}
-				else
-				{
-					if(temp->left==NULL{
-					ptr=(node*)malloc(sizeof(node));
-					ptr->data=num;
-	                ptr->left=NULL;
-	                ptr->right=NULL;	
-	                temp->left=ptr;
-	                return;
-				}
-			}
-		}
-
-
-
-int search_bst(node *q)
+#define MAX 100
+int binary_search(int a[],int num,int n)
+i
 {
-	if(q==NULL)
-		return -1;
-	else
+	int mid,low=0,high=n-1;
+	while(low<=high)
 	{
-		if(q->data==num)
-		return 1;
-		else
-		{
-			if(num > temp->data)
-			{
-				search_bst(q->right);
-			}
+		mid=(low+high)/2
+		if(a[mid]==num)
+		return mid;
+		else{
+			if(num>a[mid])
+			low=mid+1;
 			else
-			{
-				search_bst(q->left);
-			}
+			high=mid-1;
 		}
-	}
+	}return-1;
 }
 
-void delete(node **q,int num)
+int main()
 {
-	node *temp;
-	temp=*q;
-	if(temp=NULL){
-		printf("\nTHE GIVEN NUMBER IS NOT FOUND");
-		return;
-	}
-	else
-	{
-		if(temp->data==num)
-		{
-			if(temp->left==NULL&&temp->right==NULL)
-			free(temp);
-			return;
-		}
-		else
-		{
-			if(num > q->data)
-			{
-				delete(q->right,num);
-			}
-			else{
-				delete(q->left,num);
-			}
-		}
-	}
-}
+	int no,int x,int i
+	printf"enter the size of array");
+	scanf("%d",a[no]);
+	printf("entrer the sorted elements");
+	for(i=0;i<no;i++){
+		
+	scanf("%d",a[i]);}
+	printf("entrer the no to be search");
+	scanf("%d",x);
+	ifint binar
 	
 	
-	
-	
-	
-	int main(){
-		 
-		 node *root;
-		 root=NULL;
-		 insert(&root,5);
-		 insert(&root,6);
-		 insert(&root,7);
-		 traverse_inorder(root);
-		 if(search_bst(root,8)==1)
-		 printf("\nTHE NUMBER %d IS PRESENT IN THE TREE",8);
-		 else
-		 printf("THE NUMBER NOT FOUND");
-		 
-		 return 0;
-	 }
-					
-	
-	
+

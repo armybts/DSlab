@@ -18,23 +18,23 @@ return -1;
 
 int main()
 {
-int a[max],i;
-printf("\nEnter the elements of array");
+int a[max],i,n,e;
+printf("\nEnter the size of array");
 scanf("%d",&n);
 printf("\nEnter the elements of array");
-for(i=0;i<max;i++)
+for(i=0;i<n;i++)
 {
 printf("%d",&a[i]);
 }
 printf("Enter the element to be searched");
-scanf("%d",&x);
-index=binary_search(a,n,x);
-if(index==-1)
-{
-printf("ELEMENT %d NOT FOUND",&x);
-}
-else
+scanf("%d",&e);
+if(binary_search(a,e,n)!=-1)
+printf("element cfound at %d\n",binary_search(ane));
+else 
+printf("element not found");
 return 0;
-}
+}	
+
+
 
 
